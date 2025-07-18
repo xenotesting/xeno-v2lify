@@ -3,73 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Xeno</title>
-  <link rel="stylesheet" href="/fonts/fonts.css" />
+  <title>About Xeno v2.0 Netlify</title>
+  <link rel="stylesheet" href="style.css">
+  
   <style>
     @font-face {
-      font-family: "Black Mango";
-      src:
-        url("fonts/black-mango-regular.woff2") format("woff2"),
-        url("fonts/black-mango-regular.woff") format("woff"),
-        url("fonts/black-mango-regular.otf") format("opentype"),
-        url("fonts/black-mango-regular.ttf") format("truetype");
+      font-family: 'Black Mango';
+      src: url('/fonts/black-mango-regular.woff2') format('woff2'),
+           url('/fonts/black-mango-regular.woff') format('woff');
       font-weight: normal;
       font-style: normal;
-      font-display: swap;
     }
 
     body {
       margin: 0;
       background-color: #000;
-      color: white;
-      font-family: "black-mango-regular", sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: 3rem;
-      text-align: center;
-      color: white;
-      text-shadow: 0 0 10px #a020f0, 0 0 20px #a020f0;
-      margin-bottom: 1rem;
-    }
-
-    p {
+      color: #fff;
       font-family: Arial, sans-serif;
-      font-size: 1.2rem;
-      max-width: 800px;
-      line-height: 1.6;
-      text-align: center;
+      display: flex;
     }
 
-    a {
-      color: #a020f0;
-      text-decoration: underline;
+    /* Sidebar styling (copied from index.html) */
+    .sidebar {
+      width: 220px;
+      background-color: #111;
+      height: 100vh;
+      padding: 20px;
+      box-shadow: 4px 0 12px rgba(0,0,0,0.5);
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .sidebar h2 {
+      font-family: 'Black Mango', sans-serif;
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px #fff;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #bbb;
+      text-decoration: none;
+      margin: 15px 0;
+      transition: color 0.2s;
+    }
+
+    .sidebar a:hover {
+      color: #fff;
+    }
+
+    /* Main content */
+    .main {
+      margin-left: 240px;
+      padding: 40px;
+    }
+
+    .main h1 {
+      font-family: 'Black Mango', sans-serif;
+      font-size: 2.5rem;
+      color: #fff;
+      text-shadow: 0 0 15px #fff;
+    }
+
+    .main p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <h1>About Xeno</h1>
-  <p>
-    Xeno began before Summer 2024, originally known as <strong>FixMyDoge</strong> using Doge Unblocker.
-    In October 2024, the idea evolved into a full hub — not just for bypassing filters, but
-    for sharing useful tools, games, emulators, and fun features.
-  </p>
-  <p>
-    The UI started violet, shifted to a Discord-like blurple in November (peak Xeno), and then
-    moved to pink during Quarter 4 as Doge Unblocker was removed and replaced by Utopia. With
-    time, Seraph (a massive open-source game collection) was added. Utopia was eventually removed
-    due to low usage.
-  </p>
-  <p>
-    Now in Summer 2025, Xeno is more streamlined and focused on <strong>Games, Emulators, and Built-in Features</strong>.
-    You’re on the official Netlify version, with more surprises on the way.
-  </p>
-  <p>
-    Check out the main page: <a href="/index.html">Go to Home</a>
-  </p>
+
+  <div class="sidebar">
+    <h2>Xeno</h2>
+    <a href="/">Home</a>
+    <a href="/quote.html">Quote Generator</a>
+    <a href="/about.html">About Xeno v2.0 Netlify</a>
+  </div>
+
+  <div class="main">
+    <h1>About Xeno v2.0</h1>
+    <p>
+      Xeno started before the summer of 2024 as a random idea. Editing officially began in October 2024 after the project
+      was inspired out of nowhere.
+    </p>
+    <p>
+      Before it was Xeno, it was called FixMyDoge. The site used Doge Unblocker and was focused on bypassing filters. Eventually,
+      Xeno became more than that — a hub for games, tools, and other fun features.
+    </p>
+    <p>
+      The UI started violet and changed to a blurple Discord-like color in November 2024. That was peak Xeno, where most links
+      stayed unblocked for weeks.
+    </p>
+    <p>
+      When Doge’s servers went down permanently, Utopia took over. Utopia Links and Seraph Links were introduced during Quarter 4
+      — Seraph being an open-source game library with 200+ games.
+    </p>
+    <p>
+      Now in summer 2025, Utopia has been phased out due to low usage. Xeno’s focus has shifted to <strong>Games, Emulators, and Built-in Features</strong>.
+    </p>
+    <p>
+      You might see some new features added soon — possibly even some JavaScript tools — but Xeno's spirit remains: fun, flexible, and refreshingly random.
+    </p>
+  </div>
+
 </body>
 </html>
