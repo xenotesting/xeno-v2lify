@@ -6,75 +6,114 @@
   <title>About Xeno v2.0 Netlify</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- Font setup -->
   <style>
-    @font-face {
-      font-family: 'Black Mango';
-      src: url('/fonts/black-mango-regular.woff2') format('woff2'),
-           url('/fonts/black-mango-regular.woff') format('woff');
+  @font-face {
+      font-family: "Black Mango";
+      src:
+        url("fonts/black-mango-regular.woff2") format("woff2"),
+        url("fonts/black-mango-regular.woff") format("woff"),
+        url("fonts/black-mango-regular.otf") format("opentype"),
+        url("fonts/black-mango-regular.ttf") format("truetype");
       font-weight: normal;
       font-style: normal;
+      font-display: swap;
     }
 
+  body {
+    margin: 0;
+    font-family: 'Tangerine', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    min-height: 100vh;
+  }
+
+  nav {
+    width: 220px;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  nav a {
+    color: #4a90e2;
+    text-decoration: none;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  nav a.active, nav a:hover {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  main {
+    flex-grow: 1;
+    padding: 40px;
+    box-sizing: border-box;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  main h1 {
+    font-family: 'Black Mango', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 8px;
+    text-align: center;
+    text-shadow:
+      0 0 5px #4a90e2,
+      0 0 10px #4a90e2,
+      0 0 20px #4a90e2,
+      0 0 40px #4a90e2;
+  }
+
+  main p.subtitle {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #ccc;
+    margin-bottom: 40px;
+  }
+
+  section {
+    margin-bottom: 32px;
+  }
+
+  section h2 {
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+  }
+
+  section p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #ddd;
+  }
+
+  @media (max-width: 720px) {
     body {
-      margin: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      display: flex;
+      flex-direction: column;
     }
-
-    /* Sidebar styling (copied from index.html) */
-    .sidebar {
-      width: 220px;
-      background-color: #111;
-      height: 100vh;
+    nav {
+      width: 100%;
+      flex-direction: row;
+      overflow-x: auto;
+      padding: 10px 20px;
+    }
+    nav a {
+      margin: 0 12px 0 0;
+      white-space: nowrap;
+      font-size: 1rem;
+    }
+    main {
       padding: 20px;
-      box-shadow: 4px 0 12px rgba(0,0,0,0.5);
-      position: fixed;
-      top: 0;
-      left: 0;
+      max-width: 100%;
     }
-
-    .sidebar h2 {
-      font-family: 'Black Mango', sans-serif;
-      font-size: 1.5rem;
-      color: #fff;
-      margin-bottom: 30px;
-      text-shadow: 0 0 10px #fff;
-    }
-
-    .sidebar a {
-      display: block;
-      color: #bbb;
-      text-decoration: none;
-      margin: 15px 0;
-      transition: color 0.2s;
-    }
-
-    .sidebar a:hover {
-      color: #fff;
-    }
-
-    /* Main content */
-    .main {
-      margin-left: 240px;
-      padding: 40px;
-    }
-
-    .main h1 {
-      font-family: 'Black Mango', sans-serif;
-      font-size: 2.5rem;
-      color: #fff;
-      text-shadow: 0 0 15px #fff;
-    }
-
-    .main p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      max-width: 800px;
-      margin-top: 20px;
-    }
+  }
   </style>
 </head>
 <body>
